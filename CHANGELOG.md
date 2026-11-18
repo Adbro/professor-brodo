@@ -1,5 +1,14 @@
 # Changelog
 
+## professor-brodo 0.7.0
+- Four new reviewers. `visual` judges hierarchy, composition, type, color, density and point of view. `copy` checks labels, errors, empty states and terms that drift between screens. `interaction` checks hover, focus and pressed states, feedback and motion on live builds. `dataviz` runs when charts or data tables are on screen.
+- craft now reads the Figma file's design system (variables, styles, component instances) and flags hardcoded values, detached components and near-duplicate styles.
+- Live URLs get an axe-core scan, a keyboard pass, a 200% text-zoom capture, a tablet size, and captured interaction states.
+- platform names its web sources: MDN, the GOV.UK Design System and Nielsen Norman Group.
+- ref falls back to web search without Mobbin, and can use the person's own inspiration library for visual direction.
+- Removed `quick` mode and the `reviewers` setting. A crit runs every reviewer that applies by default; asking for a fast read changes volume, not coverage. Remove `reviewers:` from your config.md if you set it.
+- Focused crits: name a type in the request ("crit the copy", "accessibility pass", "just visual") and only those reviewers run, with the skeptic pass. The crit says it's focused and lists what wasn't checked. It's per request only; no config or wrapper can make it the default.
+
 ## professor-brodo 0.6.0
 - Points to [Professor Bunker](https://github.com/clarajoybunker/professor-bunker), Clara Bunker's companion skill for framing, evidence, strategy and process. When a crit's biggest problems sit upstream of the screens, the closer says so once and suggests Bunker. Never in posted Figma comments. The README links it too.
 
@@ -7,6 +16,9 @@
 - Works in ChatGPT, the Claude app and Codex, not only Claude Code. A new "Where you're running" section in SKILL.md says what to do without subagents, connectors, a browser or a file system (run the reviewer lenses one at a time, ask for screenshots). The fix prompt now covers work made with any AI tool.
 - `dist/professor-brodo.zip` for uploading to ChatGPT or Claude, rebuilt by `scripts/package.sh`.
 - `AGENTS.md` for Codex and other coding agents: repo layout, install steps, and the rules for editing the skill.
+
+## major-studio-crit 0.2.1
+- Drops the `reviewers` override, which professor-brodo 0.7.0 removed. Picks up the new visual, copy, interaction and dataviz reviewers.
 
 ## major-studio-crit 0.2.0
 - Now wraps professor-brodo instead of the old standalone design-crit skill. Still needs the `adam-voice` skill. Student and co-instructor names removed.

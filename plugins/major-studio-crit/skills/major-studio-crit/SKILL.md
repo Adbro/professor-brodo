@@ -1,6 +1,6 @@
 ---
 name: "major-studio-crit"
-description: "Major Studio crit: drafts Adam's instructor comments on a Major Studio student's Figma file or deck in his voice, with specialist reviewers (Apple HIG, accessibility, flow, craft, Mobbin precedent) and an AI-slop guard dog, gets his OK, then posts them pinned to frames. Use when Adam shares a student's Figma link and asks for comments, critique or a review pass."
+description: "Major Studio crit: drafts Adam's instructor comments on a Major Studio student's Figma file or deck in his voice, with specialist reviewers (flow, visual, craft, copy, Apple HIG, accessibility, Mobbin precedent) and an AI-slop guard dog, gets his OK, then posts them pinned to frames. Use when Adam shares a student's Figma link and asks for comments, critique or a review pass."
 ---
 
 # Major Studio crit: reviewing student Figma work with Adam
@@ -19,7 +19,6 @@ audience:     student
 voice:        adam-voice
 volume:       18-25 per section; 15-30 on a whole working file; 10-20 on a deck
 praise_share: 1 in 6
-reviewers:    full
 output:       page, then figma after his OK
 calibration:  ~/Claude/major-studio/figma-comments/ (corpus and post-batch diffs, see Reference)
 platform:     ios

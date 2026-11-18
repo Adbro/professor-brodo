@@ -29,11 +29,13 @@ Update later with `/plugin marketplace update professor-brodo`.
 ### Codex
 Ask `$skill-installer` to install `https://github.com/Adbro/professor-brodo/tree/main/plugins/professor-brodo/skills/professor-brodo`, or copy that folder into your Codex skills folder. To give a single project the skill, put the folder in that repo's `.agents/skills/`.
 
-**What changes by app:** in Claude Code the crit runs several specialist reviewers in parallel and can read Figma files directly. In ChatGPT and the Claude app, Professor Brodo runs the same reviews one after another, and works best when you upload screenshots or a PDF.
+**What changes by app:** in Claude Code the crit runs its specialist reviewers in parallel (flow, visual, craft and design-system use, copy, accessibility, platform, interaction, data viz, AI slop, precedent; decks get a story reviewer) and can read Figma files directly. In ChatGPT and the Claude app, Professor Brodo runs the same reviews one after another, and works best when you upload screenshots or a PDF.
 
 ## professor-brodo
 
-Tap in Professor Brodo to look at your work: "Professor Brodo, look at this", "get the professor on this". Or just ask for a crit on a Figma link, deck, PDF, screenshots, or a live prototype URL: "crit this", "review my design", "does this look AI-made".
+Tap in Professor Brodo to look at your work. A plain crit runs every reviewer that applies; name a type for a focused crit ("crit the copy", "accessibility pass", "just visual"), and it'll tell you what it didn't check.
+
+To call it in: "Professor Brodo, look at this", "get the professor on this". Or just ask for a crit on a Figma link, deck, PDF, screenshots, or a live prototype URL: "crit this", "review my design", "does this look AI-made".
 
 Professor Brodo talks like a studio professor at the crit wall: a one-line verdict up top, pointed questions on the findings that matter, and an "Office hours" close with the one thing to fix first. Nits stay terse. Set `voice: plain` to turn the persona off.
 
@@ -47,7 +49,6 @@ Defaults are set for reviewing your own work: a direct punch list, the AI-slop r
 audience:     self
 voice:        plain
 volume:       12-20
-reviewers:    quick
 platform:     web
 ```
 

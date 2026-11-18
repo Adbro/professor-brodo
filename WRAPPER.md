@@ -12,7 +12,7 @@ professor-brodo ships in a plugin. Plugin updates overwrite its files, so nobody
 
 | You want | Use |
 |---|---|
-| Different defaults for every crit you run (always quick, always web) | `~/.claude/professor-brodo/config.md`. No wrapper needed. |
+| Different defaults for every crit you run (always web, always plain voice) | `~/.claude/professor-brodo/config.md`. No wrapper needed. |
 | A **named variant** with its own trigger and rules: a crit for one course, one client, one team's design system, a house voice | A wrapper skill |
 
 A wrapper is a small skill that calls `professor-brodo:professor-brodo` and hands it overrides. It holds only what's different. The checklist, reviewers and skeptic pass stay in the plugin and keep updating.
@@ -41,7 +41,6 @@ Ask only what you can't infer. Suggest a default for each one.
    - `voice`: professor (the default persona), plain, or the name of a voice skill they have installed
    - `volume`: comments per set, e.g. 12-20
    - `praise_share`: e.g. 1 in 6
-   - `reviewers`: full | quick | a list of tags (flow, craft, a11y, platform, ai, ref, story)
    - `output`: list | page | figma
    - `platform`: ios | android | web | auto
 4. **Context the crit should always know.** A course brief and rubric, a client's brand rules, a design-system doc, things to never comment on. Get it pasted, or get file paths.
@@ -68,7 +67,6 @@ A variant of professor-brodo. Invoke the `professor-brodo:professor-brodo` skill
 audience:     student
 voice:        plain
 volume:       8-12
-reviewers:    full
 calibration:  ~/.claude/professor-brodo/<name>-calibration.md
 ```
 
