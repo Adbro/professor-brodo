@@ -1,5 +1,10 @@
 # Changelog
 
+## professor-brodo 0.5.0
+- Works in ChatGPT, the Claude app and Codex, not only Claude Code. A new "Where you're running" section in SKILL.md says what to do without subagents, connectors, a browser or a file system (run the reviewer lenses one at a time, ask for screenshots). The fix prompt now covers work made with any AI tool.
+- `dist/professor-brodo.zip` for uploading to ChatGPT or Claude, rebuilt by `scripts/package.sh`.
+- `AGENTS.md` for Codex and other coding agents: repo layout, install steps, and the rules for editing the skill.
+
 ## major-studio-crit 0.2.0
 - Now wraps professor-brodo instead of the old standalone design-crit skill. Still needs the `adam-voice` skill. Student and co-instructor names removed.
 

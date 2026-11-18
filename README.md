@@ -1,16 +1,33 @@
 # professor-brodo
 
-Claude skills for design work, by Adam Brodowski.
+Design-crit skills by Adam Brodowski. They work in **ChatGPT, Claude and Codex**: each skill is a plain folder with a `SKILL.md`, in the open Agent Skills format.
 
-## Install (Claude Code)
+## Install
 
+**Download:** [professor-brodo.zip](https://github.com/Adbro/professor-brodo/raw/main/dist/professor-brodo.zip). Don't unzip it.
+
+### ChatGPT
+1. In the sidebar, open **Skills**, then **Create** → **Upload from your computer**.
+2. Choose `professor-brodo.zip`. ChatGPT scans it, then it's ready.
+3. In any chat: "Professor Brodo, look at this" plus screenshots, a PDF or a link.
+
+On a work or school workspace, an admin may need to allow skill uploads.
+
+### Claude (claude.ai and the desktop app)
+Open Claude's settings, find **Skills**, and upload `professor-brodo.zip` as a custom skill. Then ask for a crit the same way.
+
+### Claude Code
 ```
 /plugin marketplace add Adbro/professor-brodo
 /plugin install professor-brodo@professor-brodo
 /plugin install major-studio-crit@professor-brodo   # optional, Adam's class wrapper
 ```
-
 Update later with `/plugin marketplace update professor-brodo`.
+
+### Codex
+Ask `$skill-installer` to install `https://github.com/Adbro/professor-brodo/tree/main/plugins/professor-brodo/skills/professor-brodo`, or copy that folder into your Codex skills folder. To give a single project the skill, put the folder in that repo's `.agents/skills/`.
+
+**What changes by app:** in Claude Code the crit runs several specialist reviewers in parallel and can read Figma files directly. In ChatGPT and the Claude app, Professor Brodo runs the same reviews one after another, and works best when you upload screenshots or a PDF.
 
 ## professor-brodo
 
@@ -22,7 +39,7 @@ See a full example: [a crit of inspofolder.com](examples/inspofolder-crit.md).
 
 Defaults are set for reviewing your own work: a direct punch list, the AI-slop report up top, and a paste-ready fix prompt for the Claude session that built it.
 
-**Your settings live outside the plugin**, so updates never overwrite them. Create `~/.claude/professor-brodo/config.md` with any keys you want to change:
+**Your settings live outside the plugin** (Claude Code and Codex; in chat apps, just say what you want in the request), so updates never overwrite them. Create `~/.claude/professor-brodo/config.md` with any keys you want to change:
 
 ```
 audience:     self
