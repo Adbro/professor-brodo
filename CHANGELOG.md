@@ -1,5 +1,8 @@
 # Changelog
 
+## professor-brodo 0.6.0
+- Points to [Professor Bunker](https://github.com/clarajoybunker/professor-bunker), Clara Bunker's companion skill for framing, evidence, strategy and process. When a crit's biggest problems sit upstream of the screens, the closer says so once and suggests Bunker. Never in posted Figma comments. The README links it too.
+
 ## professor-brodo 0.5.0
 - Works in ChatGPT, the Claude app and Codex, not only Claude Code. A new "Where you're running" section in SKILL.md says what to do without subagents, connectors, a browser or a file system (run the reviewer lenses one at a time, ask for screenshots). The fix prompt now covers work made with any AI tool.
 - `dist/professor-brodo.zip` for uploading to ChatGPT or Claude, rebuilt by `scripts/package.sh`.
