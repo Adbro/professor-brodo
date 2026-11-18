@@ -1,6 +1,6 @@
 {
   "name": "major-studio-crit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Adam's Major Studio wrapper: drafts instructor comments on student Figma files and decks in his voice, gets his OK, then posts them pinned to frames.",
   "author": {
     "name": "Adam Brodowski"
