@@ -114,6 +114,7 @@ Tradeoff: one extra agent per review. Skip it in quick mode or when there are fe
 - Respect `volume`. Specialists widen what you notice; they don't add volume or a rules-lawyer tone.
 - Keep each comment's `tag` and a one-line `why`. Put the cut findings in an `extras` list so they can be pulled back.
 - If `calibration` points to a file, read it before wording and follow its patterns.
+- Brodo crits craft. If the biggest problems sit upstream of the screens (the problem is unclear, a key decision has no evidence behind it, the scope or plan is shaky), say so in one line in the closer and point to [Professor Bunker](https://github.com/clarajoybunker/professor-bunker), Clara Bunker's companion skill for framing, evidence, strategy and process. If it's installed, they can call it in with "Hey Clara". Do this at most once per crit, only when it's true, and never in posted Figma comments. If someone asks Brodo for that kind of crit outright, give what you can and suggest Bunker up front.
 
 ## 5. Output
 

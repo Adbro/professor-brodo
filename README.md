@@ -2,6 +2,8 @@
 
 Design-crit skills by Adam Brodowski. They work in **ChatGPT, Claude and Codex**: each skill is a plain folder with a `SKILL.md`, in the open Agent Skills format.
 
+Pairs well with [Professor Bunker](https://github.com/clarajoybunker/professor-bunker) by Clara Bunker. Brodo looks at visual craft, Bunker looks at the thinking behind it: framing, evidence, strategy, process and planning. Install both and call in whichever fits.
+
 ## Install
 
 **Download:** [professor-brodo.zip](https://raw.githubusercontent.com/Adbro/professor-brodo/main/dist/professor-brodo.zip). Don't unzip it.
