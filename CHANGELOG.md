@@ -6,7 +6,8 @@
 - Live URLs get an axe-core scan, a keyboard pass, a 200% text-zoom capture, a tablet size, and captured interaction states.
 - platform names its web sources: MDN, the GOV.UK Design System and Nielsen Norman Group.
 - ref falls back to web search without Mobbin, and can use the person's own inspiration library for visual direction.
-- Removed `quick` mode and the `reviewers` setting. Every crit runs every reviewer that applies; asking for a fast read changes volume, not coverage. Remove `reviewers:` from your config.md if you set it.
+- Removed `quick` mode and the `reviewers` setting. A crit runs every reviewer that applies by default; asking for a fast read changes volume, not coverage. Remove `reviewers:` from your config.md if you set it.
+- Focused crits: name a type in the request ("crit the copy", "accessibility pass", "just visual") and only those reviewers run, with the skeptic pass. The crit says it's focused and lists what wasn't checked. It's per request only; no config or wrapper can make it the default.
 
 ## professor-brodo 0.6.0
 - Points to [Professor Bunker](https://github.com/clarajoybunker/professor-bunker), Clara Bunker's companion skill for framing, evidence, strategy and process. When a crit's biggest problems sit upstream of the screens, the closer says so once and suggests Bunker. Never in posted Figma comments. The README links it too.

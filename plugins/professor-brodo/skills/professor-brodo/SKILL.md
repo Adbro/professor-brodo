@@ -38,7 +38,26 @@ calibration:  ~/.claude/professor-brodo/calibration.md   # used only if it exist
 platform:     auto          # ios | android | web | auto (infer from frame sizes)
 ```
 
-There is no setting to skip reviewers. Every crit runs every reviewer that applies to the work (step 2). A request for a fast read changes `volume`, never coverage.
+There is no setting to skip reviewers. By default every crit runs every reviewer that applies to the work (step 2). A request for a fast read changes `volume`, never coverage.
+
+**Focused crit.** When the request clearly names a type of crit, run only that type's reviewers. The skeptic pass and editor pass still run. Types:
+
+| Ask | Reviewers |
+|---|---|
+| flow, usability, UX | `flow` |
+| visual, visual design, hierarchy, aesthetics | `visual` (+ `ref` for visual references) |
+| craft, polish, consistency, design system, components, tokens | `craft` |
+| copy, content, microcopy, writing | `copy` |
+| accessibility, a11y, contrast | `a11y` |
+| platform, HIG, Material, conventions | `platform` |
+| interaction, motion, animation, states | `interaction` |
+| charts, data viz, dashboard | `dataviz` |
+| AI slop, "does this look AI-made" | `ai` |
+| deck, story, presentation narrative | `story` |
+
+Several types can be combined ("copy and accessibility"). Only narrow when the request names a crit type; "look at the type on this" or "check this screen" is a full crit. The person has to ask for a focused crit each time: no config file or wrapper can make one the default.
+
+In a focused crit, each selected reviewer keeps its full 12-finding budget. The opener says it's a focused crit and names the type. The closer adds a line: "Not checked: <the reviewers that would have applied but didn't run>. Run a full crit before you share this." If you notice a block-level problem outside the scope while working, add at most one line after the list: "Outside this crit, but: <it>." Don't go looking for these.
 
 **Audience changes the tone, not the bar.**
 - `self`: direct punch list, no cushioning, no teaching. Include a fix prompt (step 6). The AI-slop report is a headline, not a private note.
@@ -65,7 +84,7 @@ Get context in one pass: what the product is, its core feature in one sentence, 
 
 ## 2. Specialist reviewers
 
-Launch every reviewer that applies (table below) in parallel, in one message, with your subagent tool (the Agent tool in Claude Code). No subagents? See "Where you're running". Each gets the same brief: product + core feature, stage, scope, frame list, existing comments to skip, platform.
+Launch every reviewer that applies (table below), or the focused set from step 0, in parallel, in one message, with your subagent tool (the Agent tool in Claude Code). No subagents? See "Where you're running". Each gets the same brief: product + core feature, stage, scope, frame list, existing comments to skip, platform.
 
 Each returns JSON only, at most 12 findings:
 `{frameId, x, y, finding, guideline, source_url, confidence: high|med, severity: block|fix|nit, tag}`
@@ -85,7 +104,7 @@ x,y are frame pt, on the element (for a finding about a whole screen, use its ce
 | `ref` | Precedent scout | always, if any source works | haiku | Search and return links |
 | `story` | Deck story | decks only | opus | Narrative judgment |
 
-Run every reviewer whose "runs" condition holds. For decks, `story`, `visual`, `copy`, `a11y`, `ai` and `ref` run, plus `dataviz` when there are charts; the UI shown inside a deck gets flow, craft and platform findings only when the deck is presenting that UI for crit.
+In a full crit, run every reviewer whose "runs" condition holds. For decks, `story`, `visual`, `copy`, `a11y`, `ai` and `ref` run, plus `dataviz` when there are charts; the UI shown inside a deck gets flow, craft and platform findings only when the deck is presenting that UI for crit.
 
 **flow**: Nielsen's 10 heuristics. Missing states (empty, error, loading, selected, disabled, keyboard up). Dead ends. Destructive actions that are too easy. Data that disagrees between screens (same item priced differently, counts that don't match). What pushes the main content below the fold. Smart defaults: could the app pick today's date, current location, the last choice, a system payment sheet? Controls people expect (recenter and compass on maps, primary action within thumb reach). Things that look tappable but aren't, and the reverse. If color carries meaning, is the system taught or backed up with icons?
 

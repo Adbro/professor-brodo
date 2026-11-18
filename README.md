@@ -33,7 +33,9 @@ Ask `$skill-installer` to install `https://github.com/Adbro/professor-brodo/tree
 
 ## professor-brodo
 
-Tap in Professor Brodo to look at your work: "Professor Brodo, look at this", "get the professor on this". Or just ask for a crit on a Figma link, deck, PDF, screenshots, or a live prototype URL: "crit this", "review my design", "does this look AI-made".
+Tap in Professor Brodo to look at your work. A plain crit runs every reviewer that applies; name a type for a focused crit ("crit the copy", "accessibility pass", "just visual"), and it'll tell you what it didn't check.
+
+To call it in: "Professor Brodo, look at this", "get the professor on this". Or just ask for a crit on a Figma link, deck, PDF, screenshots, or a live prototype URL: "crit this", "review my design", "does this look AI-made".
 
 Professor Brodo talks like a studio professor at the crit wall: a one-line verdict up top, pointed questions on the findings that matter, and an "Office hours" close with the one thing to fix first. Nits stay terse. Set `voice: plain` to turn the persona off.
 
