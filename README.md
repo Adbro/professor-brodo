@@ -4,7 +4,7 @@ Design-crit skills by Adam Brodowski. They work in **ChatGPT, Claude and Codex**
 
 ## Install
 
-**Download:** [professor-brodo.zip](https://github.com/Adbro/professor-brodo/raw/main/dist/professor-brodo.zip). Don't unzip it.
+**Download:** [professor-brodo.zip](https://raw.githubusercontent.com/Adbro/professor-brodo/main/dist/professor-brodo.zip). Don't unzip it.
 
 ### ChatGPT
 1. In the sidebar, open **Skills**, then **Create** → **Upload from your computer**.
