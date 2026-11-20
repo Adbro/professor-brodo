@@ -8,7 +8,7 @@ Design-crit skills by Adam Brodowski, in the open Agent Skills format: a folder 
 
 | Path | What it is |
 |---|---|
-| `plugins/professor-brodo/skills/professor-brodo/` | **The skill.** `SKILL.md` + `professor-voice.md`. This folder is the single source of truth. |
+| `plugins/professor-brodo/skills/professor-brodo/` | **The skill.** `SKILL.md` + `references/` (`reviewers.md`, `voice.md`). This folder is the single source of truth. |
 | `dist/professor-brodo.zip` | That folder zipped for upload (ChatGPT, claude.ai). Built by `scripts/package.sh`; never edit it by hand. |
 | `plugins/major-studio-crit/` | Adam's course wrapper. Depends on his own skills and course files; an example, not for general use. |
 | `.claude-plugin/`, `plugins/*/.claude-plugin/` | Claude Code plugin marketplace metadata. |
@@ -21,7 +21,7 @@ Design-crit skills by Adam Brodowski, in the open Agent Skills format: a folder 
 - **Claude Code:** `/plugin marketplace add Adbro/professor-brodo`, then `/plugin install professor-brodo@professor-brodo`.
 - **ChatGPT or the Claude app:** they upload `dist/professor-brodo.zip` themselves (see README). You can't do this for them; point them to the file.
 
-Copy the whole folder, never just `SKILL.md`: it reads `professor-voice.md` from the same folder.
+Copy the whole folder, never just `SKILL.md`: it reads the files in `references/`.
 
 ## If you're asked to run a crit
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## professor-brodo 0.8.0
+- Easier to follow, modeled on Clara Bunker's Professor Bunker. SKILL.md now opens with how to call it in, the method at a glance, and what the crit looks like, before the details. Long lists are broken into bullets.
+- The reviewer briefs moved to `references/reviewers.md` and the voice to `references/voice.md`, both read only when needed. Step numbers are unchanged, so wrappers keep working. No rules changed.
+- README rewritten: what it helps with, how to call it in, what you get back, a three-step install for every app, optional settings, and what's inside.
+
 ## professor-brodo 0.7.0
 - Four new reviewers. `visual` judges hierarchy, composition, type, color, density and point of view. `copy` checks labels, errors, empty states and terms that drift between screens. `interaction` checks hover, focus and pressed states, feedback and motion on live builds. `dataviz` runs when charts or data tables are on screen.
 - craft now reads the Figma file's design system (variables, styles, component instances) and flags hardcoded values, detached components and near-duplicate styles.
